@@ -1,0 +1,617 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.deeplife.io/CBP1/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+    
+    
+      
+        <title>Cell Blueprint User Guide - DeepLife Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cell-blueprint-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DeepLife Documentation" class="md-header__button md-logo" aria-label="DeepLife Documentation" data-md-component="logo">
+      
+  <img src="../assets/Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DeepLife Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cell Blueprint User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DeepLife Documentation" class="md-nav__button md-logo" aria-label="DeepLife Documentation" data-md-component="logo">
+      
+  <img src="../assets/Logo.png" alt="logo">
+
+    </a>
+    DeepLife Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to DeepLife Documentation!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cell Blueprint User Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Cell Blueprint User Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactome-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactome Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations-of-classical-network-visualisation-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations of classical network visualisation approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cell-blueprint-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cell Blueprint Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Cell Blueprint Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchical Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conduits-and-virtual-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conduits and virtual nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-directed-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Force-Directed layout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-significance-of-the-cell-blueprint-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional significance of the Cell Blueprint layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functional significance of the Cell Blueprint layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapping-canonical-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping canonical pathways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactome-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactome Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations-of-classical-network-visualisation-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations of classical network visualisation approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cell-blueprint-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cell Blueprint Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Cell Blueprint Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchical Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conduits-and-virtual-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conduits and virtual nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-directed-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Force-Directed layout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-significance-of-the-cell-blueprint-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional significance of the Cell Blueprint layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functional significance of the Cell Blueprint layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapping-canonical-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping canonical pathways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cell-blueprint-user-guide">Cell Blueprint User Guide</h1>
+<h2 id="introduction">Introduction</h2>
+<h3 id="interactome-networks">Interactome Networks</h3>
+<p>Cells, the building blocks of life, are one of the most complex naturally occurring entities. Any given cell may be undergoing millions of biological processes, signalling cascades, chemical and cellular interactions at any given moment in time. In healthy cells, all of these processes must work in perfect symphony to ensure normal cell function. Yet, deviations within such cellular networks, whether spurred by mutations or external stimuli, can drive cells towards pathological states and ultimately disease. Deciphering these complex mechanisms has historically posed challenges for scientists. However, DeepLife’s Cell Blueprint emerges as a beacon of clarity amidst the tangled web of cellular interactions, offering a paradigm shift in cellular interactome visualisation.</p>
+<h3 id="limitations-of-classical-network-visualisation-approaches">Limitations of classical network visualisation approaches</h3>
+<p>The default molecular interaction network displayed on the Cell Blueprint is based on DeepLife’s proprietary human interactome. Classically, interactome networks are represented with nodes, which represent genes, proteins, or other molecules; and edges, which represent connections or interactions between nodes. In classical network visualisation approaches, nodes are typically depicted with a shape such as a circle, and interactions are represented by lines (edges) between these nodes.</p>
+<p>Although intuitive, classical approaches have two key limitations, particularly with regard to increasing network complexity:</p>
+<ul>
+<li>Since the positioning of edges is arbitrary, they can frequently overlap with each other, which obfuscates the paths of individual links and creates large numbers of meaningless intersections between edges.</li>
+<li>In classical representation approaches, edges can also intersect with multiple nodes, even where a true interaction does not exist, causing ambiguity in interpretation.</li>
+</ul>
+<p>Unless mitigated, these limitations can give rise to so-called “interaction hairballs” in representations of interactome networks, where increasing network complexity corresponds to decreasing ease of interpretation <strong>(Figure 1a)</strong>.</p>
+<figure>
+
+  <img alt="Image title" src="https://drive.google.com/thumbnail?id=1QjGWuBczgTPJvktpf09YJCpBFfQaFPoe&amp;sz=s4000" />
+
+<center>
+
+   <br>
+    <b> Figure 1. </b> Schematic representation of the Cell Blueprint layout construction. <br>
+    <b> a. </b> Starting interaction “hairball”. A particular node and its interactions are highlighted in blue. The partners of the highlighted nodes are shown in black filling. In this representation,  interpretation can be challenging as a result of large numbers of overlapping nodes and edges.  <br>
+    <b> b. </b> Visual representation of the hierarchical community detection, reminiscent of dendrograms. The original highlighted interactions are represented as passing through the hierarchy branches.  <br>
+    <b>c.</b> Conversion of the hierarchical clustering branches into graph edges.  <br>
+    <b>d.</b> Final Cell Blueprint layout. The original highlighted interactions are represented as passing through “conduits”.  <br><br>
+
+
+</center>
+
+</figure>
+<h2 id="the-cell-blueprint-layout">The Cell Blueprint Layout</h2>
+<h3 id="hierarchical-clustering">Hierarchical Clustering</h3>
+<p>Interaction hairballs are too dense for easy interpretation. In DeepLife Cell Blueprint, the first step taken towards a clearer visual representation is to run a hierarchical community detection algorithm on the network. The result of such clustering shares similarities with dendrograms typically used in evolutionary biology <strong>(Figure 1b)</strong>. However, instead of clustering based on genetically similar organisms, here we hierarchically cluster genes and proteins based on their interactions. Groups of nodes that are tightly interconnected are clustered together, breaking up the dense interactome network into communities. The original molecular interaction can then be drawn as passing through the hierarchical clustering branches <strong>(Figure 1b)</strong>.</p>
+<figure>
+
+  <img alt="Image title" src="https://drive.google.com/thumbnail?id=1sFdvigQWC_MEWMVWmrusYSjey9eWRGKZ&amp;sz=s400" />
+
+
+</figure>
+<h3 id="conduits-and-virtual-nodes">Conduits and virtual nodes</h3>
+<p>Next, we create a virtual node to represent each cluster &amp; subcluster, (equivalent to a cluster “branch point” on a dendrogram), along with new edges that link each parent virtual node to its children in the hierarchy. Edges corresponding to the original interactions are also added when both interacting partners are found within the same subcluster at the very end of the hierarchy.</p>
+<p>The edges that link virtual nodes are called <strong>“Conduits”</strong> <strong>(Figure 1c)</strong>. Conduits are then used to draw the original interactions as passing through them <strong>(Figure 2</strong>). Conduits, as such, contain all the individual edges that link real nodes within one cluster to those in another cluster. Conceptually, bundling edges into conduits can be thought of as grouping individual wires together within a main cable, where the wires represent edges <strong>(Figure 2)</strong>. In practice, this significantly decreases edge overlap within the Cell Blueprint, enabling clearer and more straightforward interpretation of interactions of interest. At each end of a conduit lies a different node cluster, where individual edges split back out to connect to their respective nodes.</p>
+<figure>
+
+  <img alt="Image title" src="https://drive.google.com/thumbnail?id=1NcsAzQ2WcXOqoRYES1EVnTfk0Ayu5jbn&amp;sz=s400" />
+
+<center>
+
+   <br>
+    <b> Figure 2. </b> Edges within conduits can be thought of as wires within a cable (see inset).
+
+
+</center>
+
+
+</figure>
+<h3 id="force-directed-layout">Force-Directed layout</h3>
+<p>To spread the interactome nodes in two-dimensional space and  yield the characteristic Cell Blueprint layout, we apply a force-directed layout algorithm, which results in nodes repelling each other akin to charged particles. Virtual nodes are then removed from the final visualisation, leaving only conduits, nodes, and individual edges. <strong>(Figure 1d)</strong>.</p>
+<h2 id="functional-significance-of-the-cell-blueprint-layout">Functional significance of the Cell Blueprint layout</h2>
+<h3 id="mapping-canonical-pathways">Mapping canonical pathways</h3>
+<p>While the Cell Blueprint layout clustering is solely based on molecular interactions, it recapitulates known functional gene groups and pathways to some extent. Genes that participate together in given biological processes will often cluster in the same areas of the layout. For instance, genes from the Ras/Raf pathway are concentrated within a main cluster when mapped on the Cell Blueprint (<strong>Figure 3</strong>).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+    
+  </body>
+</html>

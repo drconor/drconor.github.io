@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.deeplife.io/</loc>
-         <lastmod>2024-05-02</lastmod>
+         <lastmod>2024-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.deeplife.io/CellBlueprint/</loc>
-         <lastmod>2024-05-02</lastmod>
+         <loc>https://docs.deeplife.io/CBP1/</loc>
+         <lastmod>2024-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
