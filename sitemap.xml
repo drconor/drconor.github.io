@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://docs.deeplife.io/</loc>
+         <loc>https://docs.deeplife.io/Introduction/</loc>
          <lastmod>2024-05-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.deeplife.io/CBP1/</loc>
+         <loc>https://docs.deeplife.io/additional_resources/</loc>
+         <lastmod>2024-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.deeplife.io/enrichment/</loc>
+         <lastmod>2024-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.deeplife.io/molecular_interaction_data/</loc>
+         <lastmod>2024-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.deeplife.io/navigation/</loc>
          <lastmod>2024-05-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
